@@ -62,4 +62,19 @@ public class Cipher {
                     } else {
                         cipherText += ch;
                     }
+                } else if (Character.isUpperCase(character)){
+                    char ch = (char)(character - shift);
+                    if(ch < 'A'){
+                        cipherText += (char)(character + (26 - shift));
+                    } else {
+                        cipherText += ch;
+                    }
+                }
+            } else {
+                cipherText += character;
+            }
+        }
+        return cipherText;
+    }
+}
 }
