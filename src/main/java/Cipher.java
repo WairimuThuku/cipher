@@ -38,4 +38,10 @@ public class Cipher {
                         cipherText += ch;
                     }
                 }
+            } else {
+                cipherText += character;
+            }
+        }
+        return cipherText;
+    }
 }
