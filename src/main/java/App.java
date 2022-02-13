@@ -20,4 +20,25 @@ public class App {
 
                 System.out.println("Your encrypted word is " + cipherText);
 
+            } else if (directionChoice.equals("Decrypt")) {
+
+                System.out.println("Enter an encrypted word to be decrypted: ");
+                String userEncryptedText = input.next();
+
+                System.out.println("Enter the shift of the encrypted word: ");
+                Integer userEncryptedShift = input.nextInt();
+
+                Cipher inputCaesarDecrypt = new Cipher(userEncryptedText, userEncryptedShift);
+                String decrypted = inputCaesarDecrypt.decrypt(userEncryptedText, userEncryptedShift);
+
+                System.out.println("Your decrypted word is " + decrypted);
+            } else if (directionChoice.equals("Exit")) {
+                runningProgram = false;
+            } else {
+                System.out.println("Oops!, your input is not readable, choose from Encrypt, Decrypt or Exit please");
+            }
+        }
+    }
+}
+
 
