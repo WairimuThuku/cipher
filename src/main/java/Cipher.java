@@ -8,4 +8,8 @@ public class Cipher {
     public String getPlainWord(){
         return plainWord;
     }
+
+    public int getShift(){
+        return shift;
+    }
 }
