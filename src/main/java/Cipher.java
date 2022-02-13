@@ -5,4 +5,7 @@ public class Cipher {
         this.plainWord = plainWord;
         this.shift = shift;
     }
+    public String getPlainWord(){
+        return plainWord;
+    }
 }
