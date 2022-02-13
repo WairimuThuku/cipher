@@ -77,4 +77,4 @@ public class Cipher {
         return cipherText;
     }
 }
-}
+
